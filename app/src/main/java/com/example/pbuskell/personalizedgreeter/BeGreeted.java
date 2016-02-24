@@ -10,10 +10,14 @@ import android.widget.EditText;
 
 public class BeGreeted extends AppCompatActivity {
 
-    String strUsersName = "";
+    String strFirstName = "";
+    String strMiddle = "";
+    String strLast = "";
 
     Button btnGreetMe;
     EditText edtxtNameField;
+    EditText edtxtMiddleField;
+    EditText edtxtLastField;
     TextView txtvwGreetingSpace;
 
 
@@ -24,15 +28,33 @@ public class BeGreeted extends AppCompatActivity {
 
         btnGreetMe = (Button) findViewById(R.id.btnGreetMe);
         edtxtNameField = (EditText) findViewById(R.id.edtxtNameField);
+        edtxtMiddleField = (EditText) findViewById(R.id.edtxtMiddleField);
+        edtxtLastField = (EditText) findViewById(R.id.edtxtLastField);
         txtvwGreetingSpace = (TextView) findViewById(R.id.txtvwGreetingSpace);
     }
 
     public void greetTheUser(View vw)
     {
         Resources res = getResources();
+        String result = "";
 
-        strUsersName = edtxtNameField.getText().toString();
+        strFirstName = edtxtNameField.getText().toString();
+        strMiddle = edtxtMiddleField.getText().toString();
+        strLast = edtxtLastField.getText().toString();
 
-        txtvwGreetingSpace.setText(String.format(res.getString(R.string.strGreeting), strUsersName));
+        if(!strFirstName.equals("Name"))
+        {
+            result += strFirstName + " ";
+        }
+        if(!strMiddle.equals("Name"))
+        {
+            result += strMiddle + " ";
+        }
+        if(!strLast.equals("Name"))
+        {
+            result += strLast + " ";
+        }
+
+        txtvwGreetingSpace.setText(String.format(res.getString(R.string.strGreeting), result));
     }
 }

@@ -4,4 +4,6 @@
     <string name="strGetGreeted">Get Greeted!</string>
     <string name="strNamePlaceholder">Name</string>
     <string name="strGreeting">Hello, %1$s!</string>
+    <string name="strPromptMiddle">What is your middle name?</string>
+    <string name="strPromptLast">What is your last name?</string>
 </resources>
