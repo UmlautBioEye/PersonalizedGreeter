@@ -16,28 +16,39 @@
         android:text="@string/strNamePlaceholder"
         android:ems="10"
         android:id="@+id/edtxtNameField"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="96dp" />
+        android:layout_below="@+id/txtvwPrompt"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtxtMidName"
+        android:layout_below="@+id/edtxtNameField"
+        android:layout_alignLeft="@+id/edtxtNameField"
+        android:layout_alignStart="@+id/edtxtNameField"
+        android:layout_alignRight="@+id/edtxtNameField"
+        android:layout_alignEnd="@+id/edtxtNameField"
+        android:text="@string/strMidNamePlaceholder" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtxtLstName"
+        android:layout_below="@+id/edtxtMidName"
+        android:layout_alignLeft="@+id/edtxtMidName"
+        android:layout_alignStart="@+id/edtxtMidName"
+        android:layout_alignRight="@+id/edtxtMidName"
+        android:layout_alignEnd="@+id/edtxtMidName"
+        android:text="@string/strLstNamePlaceholder" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/strGetGreeted"
         android:id="@+id/btnGreetMe"
-        android:layout_below="@+id/edtxtNameField"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp"
-        android:onClick="greetTheUser" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/txtvwGreetingSpace"
-        android:layout_below="@+id/btnGreetMe"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="77dp" />
+        android:onClick="greetTheUser"
+        android:layout_below="@+id/edtxtLstName"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,6 +57,15 @@
         android:text="@string/strPromptQuestion"
         android:id="@+id/txtvwPrompt"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp" />
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtvwGreetingSpace"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/btnGreetMe"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
